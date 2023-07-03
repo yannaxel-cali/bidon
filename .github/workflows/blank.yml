@@ -34,4 +34,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo "GIT_TAG=${GITHUB_REF##*/}"
+          - name: Set tag as variable
+          
+      - name: Set tag as variable
+        id: version
+        run: |
+          echo "${GITHUB_REF##*/}" 
