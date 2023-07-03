@@ -14,7 +14,7 @@ jobs:
       branch: ${{ steps.check_step.outputs.branch }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
         with:
           ref: ${{ github.ref }}
       - name: Get current branch
