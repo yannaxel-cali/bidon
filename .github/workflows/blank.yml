@@ -23,3 +23,4 @@ jobs:
           branch=${raw##*/}
           echo "BRANCH=$branch" >> $GITHUB_ENV
           echo "Branch is $branch."
+          echo ${{ github.ref_type }}
