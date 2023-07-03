@@ -20,6 +20,6 @@ jobs:
       - name: Get current branch
         id: check_step
         run: |
-          raw=$(git tag -r --contains ${{ github.ref }})
+          raw=$(git tag --sort=v:refname | tail -1)
           echo "Branch is $raw."
           echo ${{ github.ref_type }}
